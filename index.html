@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesha Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+          },
+          colors: {
+            primary: "#0F172A",
+            accent: "#F59E0B",
+            secondary: "#1E293B",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100vw;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-900 text-white overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 nav-blur">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl font-bold">
+          <span class="gradient-text">Ganesha</span>
+          <span class="gradient-text">Foundation</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#hero" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Home</a>
+          <a href="#about" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">About</a>
+          <a href="#experience" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Experience</a>
+          <a href="#common-man-uprising"
+            class="text-amber-400 font-semibold border-b-2 border-amber-400 transition-colors duration-300">
+            Common Man Uprising
+          </a>
+          <!-- <a href="blog.html" class="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+            target="_blank">Our Blogs</a> -->
+          <a href="#contact" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Contact</a>
+        </div>
+        <button class="md:hidden text-white focus:outline-none" onclick="toggleMenu()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+        <div class="flex flex-col space-y-3">
+          <a href="#hero" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Home</a>
+          <a href="#about" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">About</a>
+          <a href="#experience" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Experience</a>
+          <a href="#common-man-uprising"
+            class="text-amber-400 font-semibold border-b-2 border-amber-400 transition-colors duration-300">
+            Common Man Uprising
+          </a>
+          <!-- <a href="blog.html" class="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+            target="_blank">Our Blogs</a> -->
+          <a href="#contact" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="hero"
+    class="relative min-h-screen w-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
+    style="background-image: url('./hero-bg.png');">
+    <!-- Overlay (for readability) -->
+    <div class="absolute inset-0 bg-black/60"></div> <!-- Optional Gradient Glow -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-10 left-10 w-48 h-48 bg-amber-400 opacity-10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-72 h-72 bg-orange-500 opacity-10 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Glow Effects -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-20 left-10 w-56 h-56 bg-amber-400 opacity-10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-72 h-72 bg-orange-500 opacity-10 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl px-6 text-center mx-auto flex flex-col items-center">
+
+      <!-- Tagline -->
+      <p class="text-amber-400 font-medium text-sm sm:text-lg tracking-wide uppercase">
+        Uprising! - Civil Rights Initiative
+      </p>
+
+      <!-- Heading -->
+      <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold ">
+        <span class="text-white">Empowering Voices Through</span>
+        <span class="block bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+          Ganesha Foundation
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p class="mt-6 text-gray-300 text-base sm:text-lg leading-relaxed  ">
+        Ganesha Foundation is a social service organization registered under the Societies Registration Act, 1860.
+        We are dedicated to promoting civil rights and constitutional liberties across Bihar through awareness,
+        advocacy, and impactful community initiatives.
+      </p>
+
+      <!-- Buttons -->
+      <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-12">
+        <a href="#about"
+          class="bg-gradient-to-r from-amber-400 to-orange-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-amber-400/30 transition-all duration-300 transform hover:scale-105">
+          Know My Journey
+        </a>
+
+        <a href="#contact"
+          class="border border-amber-400 text-amber-400 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-amber-400 hover:text-black transition-all duration-300">
+          Connect With Me
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-12 grid grid-cols-3 gap-10 max-w-md mx-auto lg:mx-0">
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold text-white">15+</div>
+          <div class="text-gray-400 text-xs sm:text-sm">Years Experience</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold text-white">200+</div>
+          <div class="text-gray-400 text-xs sm:text-sm">Projects Led</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold text-white">50+</div>
+          <div class="text-gray-400 text-xs sm:text-sm">Team Members</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="about" class="relative w-screen bg-slate-800 py-20 overflow-hidden">
+    <div class="relative w-full max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="text-amber-400 font-medium mb-4">Who We Are</p>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+          About <span class="gradient-text">Ganesha Foundation</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left Content -->
+        <div class="space-y-5 scroll-reveal">
+          <h3 class="text-3xl font-bold leading-snug">
+            Empowering People,
+            <span class="text-white">Protecting Rights</span>
+          </h3>
+
+          <p class="text-gray-300 text-base leading-relaxed">
+            Ganesha Foundation is a social service organization registered under the Societies Registration Act, 1860
+            (Act 21).
+            It is committed to promoting civil rights and liberties guaranteed under the Constitution of India among the
+            people of Bihar.
+          </p>
+
+          <p class="text-gray-300 text-base leading-relaxed">
+            The foundation works to protect individuals from unfair exploitation by those in power and challenges
+            policies
+            that increase the suffering of common people. It also strives to reduce social and personal conflicts
+            arising from
+            inequality, ego clashes, and lack of human values.
+          </p>
+
+          <p class="text-gray-300 text-base leading-relaxed">
+            Through awareness, legal support, and community engagement, the organization aims to create a more just,
+            peaceful, and empowered society.
+          </p>
+        </div>
+
+        <!-- Right Content (Service Cards) -->
+        <div class="grid sm:grid-cols-2 gap-6 scroll-reveal">
+
+          <!-- Card 1 -->
+          <div class="card-glow bg-slate-700/50 p-6 rounded-2xl text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
+              <img src="./assets/balance.png" alt="Legal Support" class="w-6 h-6 object-contain">
+            </div>
+            <h4 class="text-lg font-bold mb-2">Legal Support</h4>
+            <p class="text-gray-400 text-sm">
+              Filing PILs against harmful policies and providing free legal aid to protect citizens' rights.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card-glow bg-slate-700/50 p-6 rounded-2xl text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
+              <img src="./assets/inner.png" alt="Peace & Harmony" class="w-6 h-6 object-contain">
+            </div>
+            <h4 class="text-lg font-bold mb-2">Peace & Harmony</h4>
+            <p class="text-gray-400 text-sm">
+              Promoting social harmony and resolving conflicts through collective community efforts.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card-glow bg-slate-700/50 p-6 rounded-2xl text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
+              <img src="./assets/marketing.png" alt="Awareness Programs" class="w-6 h-6 object-contain">
+            </div>
+            <h4 class="text-lg font-bold mb-2">Awareness Programs</h4>
+            <p class="text-gray-400 text-sm">
+              Conducting campaigns to educate people about their constitutional rights and freedoms.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card-glow bg-slate-700/50 p-6 rounded-2xl text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
+              <img src="./assets/personal-data.png" alt="Social Protection" class="w-6 h-6 object-contain">
+            </div>
+            <h4 class="text-lg font-bold mb-2">Social Protection</h4>
+            <p class="text-gray-400 text-sm">
+              Supporting vulnerable individuals against exploitation and dominance by powerful groups.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Initiative / Experience Section -->
+  <section id="experience" class="relative w-screen bg-slate-900 py-20 overflow-hidden">
+    <div class="relative w-full max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="text-amber-400 font-medium mb-4">Our Journey</p>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+          Initiative <span class="gradient-text"> & Impact</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Initiative 1 -->
+        <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Uprising! – Civil Rights Initiative</h3>
+              <p class="text-amber-400 font-semibold text-lg">
+                A flagship program of Ganesha Foundation
+              </p>
+            </div>
+            <div class="text-gray-400 font-medium bg-slate-700 px-4 py-2 rounded-full">
+              Ongoing Initiative
+            </div>
+          </div>
+          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+            “Uprising!” is a dedicated movement to promote civil rights and constitutional liberties
+            among citizens of Bihar. It focuses on empowering individuals with knowledge and support
+            to stand against injustice, exploitation, and misuse of power.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-amber-400/20 text-amber-400 px-4 py-2 rounded-full text-sm font-medium">Civil Rights</span>
+            <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">Public
+              Awareness</span>
+            <span class="bg-blue-400/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium">Social Justice</span>
+          </div>
+        </div>
+
+        <!-- Initiative 2 -->
+        <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Legal Aid & PIL Support</h3>
+              <p class="text-amber-400 font-semibold text-lg">
+                Justice for Every Citizen
+              </p>
+            </div>
+            <div class="text-gray-400 font-medium bg-slate-700 px-4 py-2 rounded-full">
+              Core Service
+            </div>
+          </div>
+          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+            The Foundation actively supports filing Public Interest Litigations (PILs) against harmful
+            and exploitative policies while providing free legal assistance to individuals struggling
+            to protect their fundamental rights.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-green-400/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium">Legal Aid</span>
+            <span class="bg-purple-400/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium">PIL Filing</span>
+            <span class="bg-red-400/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium">Justice Access</span>
+          </div>
+        </div>
+
+        <!-- Initiative 3 -->
+        <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Peace & Harmony Support</h3>
+              <p class="text-amber-400 font-semibold text-lg">
+                Building Strong Communities
+              </p>
+            </div>
+            <div class="text-gray-400 font-medium bg-slate-700 px-4 py-2 rounded-full">
+              Community Initiative
+            </div>
+          </div>
+          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+            Focused on reducing conflicts arising from ego clashes, inequality, and misuse of influence,
+            this initiative promotes peaceful coexistence and harmony through collective engagement.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-indigo-400/20 text-indigo-400 px-4 py-2 rounded-full text-sm font-medium">Conflict
+              Resolution</span>
+            <span class="bg-pink-400/20 text-pink-400 px-4 py-2 rounded-full text-sm font-medium">Social Harmony</span>
+            <span class="bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">Community
+              Support</span>
+          </div>
+        </div>
+
+        <!-- Initiative 4 -->
+        <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Statewide Awareness Campaigns</h3>
+              <p class="text-amber-400 font-semibold text-lg">
+                Educating for Empowerment
+              </p>
+            </div>
+            <div class="text-gray-400 font-medium bg-slate-700 px-4 py-2 rounded-full">
+              Ongoing Effort
+            </div>
+          </div>
+          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+            Organizing awareness programs across Bihar to educate citizens about their constitutional
+            rights, liberties, and responsibilities, empowering them to take informed actions.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-teal-400/20 text-teal-400 px-4 py-2 rounded-full text-sm font-medium">Awareness</span>
+            <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">Education</span>
+            <span class="bg-green-400/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium">Empowerment</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contact Note -->
+      <div class="mt-10 text-gray-400 text-center text-base scroll-reveal">
+        For collaborations, support, or legal assistance, reach us at:
+        <span class="text-amber-400 font-medium">ganeshafoundation2026@gmail.com</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="relative w-screen bg-slate-800 py-20 overflow-hidden">
+    <div class="relative w-full max-w-6xl mx-auto px-4 sm:px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="text-amber-400 font-medium mb-4">Our Impact</p>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+          Impact <span class="gradient-text">Highlights</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <img src="./assets/initiative.png" class="w-full h-full object-contain" />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Uprising! Initiative</h3>
+          <p class="text-gray-400">
+            A flagship civil rights movement empowering citizens of Bihar to stand against injustice,
+            exploitation, and misuse of power through awareness and collective action.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <img src="./assets/regulatory-compliance.png" class="w-full h-full object-contain" />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Legal Aid & PIL Support</h3>
+          <p class="text-gray-400">
+            Filing Public Interest Litigations (PILs) against harmful policies and providing free legal
+            assistance to protect citizens’ constitutional rights.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <img src="./assets/social-media-marketing.png" class="w-full h-full object-contain" />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Awareness Campaigns</h3>
+          <p class="text-gray-400">
+            Organizing statewide programs to educate people about civil rights and liberties
+            guaranteed under the Constitution of India.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <img src="./assets/inner.png" class="w-full h-full object-contain" />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Peace & Harmony</h3>
+          <p class="text-gray-400">
+            Promoting peaceful coexistence by resolving social and personal conflicts caused by
+            inequality, ego clashes, and misuse of influence.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <img src="./assets/personal-data.png" class="w-full h-full object-contain" />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Protection from Exploitation</h3>
+          <p class="text-gray-400">
+            Supporting individuals against unfair exploitation by authorities or financially powerful
+            groups, ensuring dignity and justice for all.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <img src="./assets/network.png" class="w-full h-full object-contain" />
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Community Empowerment</h3>
+          <p class="text-gray-400">
+            Building a strong, aware, and united society through collective participation,
+            education, and social responsibility initiatives.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="common-man-uprising" class="relative w-screen bg-slate-900 py-16 overflow-hidden">
+    <div class="relative w-full max-w-5xl mx-auto px-4 sm:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-10 scroll-reveal">
+        <p class="text-amber-400 font-medium mb-2 tracking-wide uppercase">Bihari's Call to Rebuild Bihar</p>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-2">
+          Common Man <span class="gradient-text">Uprising</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto mb-6 rounded-full"></div>
+        <p class="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">
+          A people-driven initiative dedicated to promoting civil rights, constitutional awareness,
+          and justice for every citizen of Bihar through collective action and empowerment.
+        </p>
+      </div>
+
+      <!-- Hero Quote Box -->
+      <div class="card-glow bg-slate-800/50 rounded-2xl p-6 shadow-2xl mb-8 scroll-reveal">
+        <p class="text-lg text-gray-200 italic mb-1 leading-relaxed">
+          "Common Man Uprising is a movement to empower citizens with awareness, courage, and unity
+          to stand against injustice and protect their constitutional rights."
+        </p>
+        <span class="block text-amber-400 font-bold mt-1 text-right">— Ganesha Foundation</span>
+      </div>
+
+      <ol class="relative border-l-4 border-amber-400/60 pl-8 mb-8 space-y-12 scroll-reveal">
+        <!-- Point 1 -->
+        <li class="relative pl-8">
+          <div class="absolute -left-5 top-4 w-4 h-4 bg-amber-400 rounded-full border-2 border-slate-900"></div>
+          <span class="block font-bold text-white text-xl mb-1">Awakening of Rights</span>
+          <div class="text-gray-300 text-base leading-relaxed">
+            Many citizens remain unaware of the rights and liberties guaranteed under the Constitution of India.
+            This initiative focuses on spreading awareness so individuals can recognize injustice and stand up
+            for their dignity and freedom.
+          </div>
+        </li>
+        <!-- Point 2 -->
+        <li class="relative pl-8">
+          <div class="absolute -left-5 top-4 w-4 h-4 bg-amber-400 rounded-full border-2 border-slate-900"></div>
+          <span class="block font-bold text-white text-xl mb-1">Standing Against Exploitation</span>
+          <div class="text-gray-300 text-base leading-relaxed">
+            The movement aims to protect people from unfair exploitation by those in positions of power.
+            It encourages collective voice and legal action against policies or practices that harm the public.
+          </div>
+        </li>
+        <!-- Point 3 -->
+        <li class="relative pl-8">
+          <div class="absolute -left-5 top-4 w-4 h-4 bg-amber-400 rounded-full border-2 border-slate-900"></div>
+          <span class="block font-bold text-white text-xl mb-1">Building a Just Society</span>
+          <div class="text-gray-300 text-base leading-relaxed">
+            Through awareness, legal support, and community participation, the initiative works toward reducing
+            conflicts, promoting human values, and creating a peaceful and equitable society.
+          </div>
+        </li>
+      </ol>
+
+
+      <!-- Bold Action Boxes -->
+      <div class="grid md:grid-cols-2 gap-6 scroll-reveal">
+        <!-- Left Box: "We the People of Patna" -->
+        <div class="card-glow bg-slate-900/50 rounded-xl p-6">
+          <h3 class="text-amber-400 font-semibold text-xl mb-4">Legal & Awareness Action</h3>
+          <ul class="text-gray-200 list-disc pl-6 space-y-2 leading-relaxed">
+            <li>Filing Public Interest Litigations (PILs) against harmful policies</li>
+            <li>Providing free legal aid to protect individual rights</li>
+            <li>Conducting awareness programs on constitutional rights</li>
+            <li>Supporting citizens in raising their voice against injustice</li>
+          </ul>
+        </div>
+        <!-- Right Box: Statewide & National Vision -->
+        <div class="card-glow bg-slate-900/50 rounded-xl p-6">
+          <h3 class="text-orange-400 font-semibold text-xl mb-4">Vision for Society</h3>
+          <ul class="text-gray-200 list-disc pl-6 space-y-2 leading-relaxed">
+            <li>Promoting peace and harmony across communities</li>
+            <li>Reducing conflicts caused by inequality and misuse of power</li>
+            <li>Encouraging active citizen participation in governance</li>
+            <li>Building a society based on justice, dignity, and equality</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Final Call-to-Action -->
+      <div class="mt-12 text-center text-amber-300 font-semibold text-lg scroll-reveal">
+        Stand up—be aware, be responsible, and be empowered.<br />
+        Join the movement to protect rights, promote justice, and build a better future together.
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="contact" class="relative w-screen bg-slate-900 py-20 overflow-hidden">
+    <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="text-amber-400 font-medium mb-4">Let's Connect</p>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">
+          Get In <span class="gradient-text">Touch</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- Contact Information Side -->
+        <div class="scroll-reveal">
+          <div class="bg-slate-800 rounded-3xl p-8 shadow-lg h-full">
+            <h3 class="text-2xl font-bold text-white mb-8">Contact Information</h3>
+
+            <!-- Location -->
+            <div class="contact-info-item mb-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold mb-2">Current Location</h4>
+                  <p class="text-gray-300">Patna Bihar</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-info-item mb-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold mb-2">Email</h4>
+                  <p class="text-gray-300 break-all">ganeshafoundation2026@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone
+            <div class="contact-info-item mb-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold mb-2">Phone</h4>
+                  <p class="text-gray-300">+919229551125</p>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Social Media Links -->
+            <div class="mt-10">
+              <h4 class="text-white font-semibold mb-6">Follow Me</h4>
+              <div class="flex space-x-4">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/vishal-singh-863416131"
+                  class="social-icon block w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/vishal.sinh03"
+                  class="social-icon block w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://x.com/Vishal_Sinh03"
+                  class="social-icon block w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Side -->
+        <div class="scroll-reveal">
+          <form class="bg-slate-800 rounded-3xl p-8 shadow-lg space-y-6 h-full">
+            <h3 class="text-2xl font-bold text-white mb-6">Send Message</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-gray-300 mb-2 font-medium" for="name">Name</label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300"
+                  type="text" id="name" name="name" placeholder="Enter Your name" required />
+              </div>
+              <div>
+                <label class="block text-gray-300 mb-2 font-medium" for="email">Email</label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300"
+                  type="email" id="email" name="email" required placeholder="Enter Your email" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-gray-300 mb-2 font-medium" for="subject">Subject</label>
+              <input
+                class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300"
+                type="text" id="subject" name="subject" placeholder="Enter subject" required />
+            </div>
+
+            <div>
+              <label class="block text-gray-300 mb-2 font-medium" for="message">Message</label>
+              <textarea
+                class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300 resize-none"
+                id="message" name="message" rows="6" required placeholder="Send Your message here..."></textarea>
+            </div>
+
+            <div class="text-center pt-4">
+              <button type="submit"
+                class="bg-gradient-to-r from-amber-400 to-orange-500 text-black px-10 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-amber-400/25 transition-all duration-300 transform hover:scale-105 w-full md:w-auto">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="w-screen bg-slate-800 py-8 mt-20">
+    <div
+      class="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center sm:flex-row sm:justify-between space-y-6 sm:space-y-0">
+
+      <!-- Contact Side -->
+      <div
+        class="order-1 sm:order-2 flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 text-sm text-gray-300 justify-center w-full sm:w-auto text-center sm:text-left">
+
+        <!-- Email -->
+        <a href="mailto:ganeshafoundation2026@gmail.com"
+          class="hover:text-amber-400 transition-colors duration-300 flex items-center justify-center sm:justify-start space-x-2 whitespace-nowrap">
+          <svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          <span>ganeshafoundation2026@gmail.com</span>
+        </a>
+
+        <!-- WhatsApp Icon -->
+        <!-- <a href="https://wa.me/919229551125" target="_blank" rel="noopener noreferrer"
+          class="hover:text-amber-400 transition-colors duration-300 flex items-center justify-center sm:justify-start space-x-2 whitespace-nowrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5">
+            <path fill="#25D366"
+              d="M16 3C8.832 3 3 8.832 3 16c0 2.36.594 4.552 1.63 6.486L3 29l6.7-1.745A12.88 12.88 0 0 0 16 29c7.168 0 13-5.832 13-13S23.168 3 16 3z" />
+            <path fill="#FFF"
+              d="M22.3 18.67c-.31-.15-1.84-.91-2.13-1.02-.28-.1-.48-.15-.68.15-.2.31-.78 1.02-.96 1.22-.18.2-.36.23-.67.08-.31-.15-1.3-.48-2.48-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.13-.13.31-.36.46-.54.15-.18.2-.31.31-.51.1-.2.05-.38-.02-.54-.08-.15-.68-1.64-.93-2.25-.24-.58-.49-.5-.68-.51-.18-.01-.38-.01-.58-.01s-.54.08-.82.38c-.28.31-1.08 1.06-1.08 2.59s1.11 3.01 1.26 3.22c.15.2 2.18 3.34 5.29 4.69.74.32 1.32.51 1.77.65.74.24 1.42.21 1.95.13.59-.09 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.35z" />
+          </svg>
+          <span>+91 92295 51125</span>
+        </a> -->
+      </div>
+
+      <!-- Copyright -->
+      <div class="order-2 sm:order-1 text-sm select-none w-full text-center sm:text-left text-gray-400">
+        &copy; 2026 Ganesha Foundation. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
