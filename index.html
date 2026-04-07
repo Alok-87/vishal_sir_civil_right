@@ -42,19 +42,23 @@
   <nav class="fixed w-full z-50 nav-blur">
     <div class="max-w-6xl mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
-        <div class="flex items-center gap-2 text-xl font-bold">
-          <img src="./assets/Ganesh Foundation Logo.png" alt="Logo" class="h-12 w-auto" />
-          <span class="gradient-text">'Uprising' -</span>
-          <span class="gradient-text">A Ganesha Foundation Initiative </span>
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-hand-fist-icon lucide-hand-fist">
-            <path
-              d="M12.035 17.012a3 3 0 0 0-3-3l-.311-.002a.72.72 0 0 1-.505-1.229l1.195-1.195A2 2 0 0 1 10.828 11H12a2 2 0 0 0 0-4H9.243a3 3 0 0 0-2.122.879l-2.707 2.707A4.83 4.83 0 0 0 3 14a8 8 0 0 0 8 8h2a8 8 0 0 0 8-8V7a2 2 0 1 0-4 0v2a2 2 0 1 0 4 0" />
-            <path d="M13.888 9.662A2 2 0 0 0 17 8V5A2 2 0 1 0 13 5" />
-            <path d="M9 5A2 2 0 1 0 5 5V10" />
-            <path d="M9 7V4A2 2 0 1 1 13 4V7.268" />
-          </svg> -->
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+
+          <!-- Logo -->
+          <img src="./assets/Ganesh Foundation Logo.png" alt="Logo" class="h-10 sm:h-12 w-auto n" />
+
+          <!-- Text -->
+          <div
+            class="flex flex-row sm:flex-row items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg font-bold leading-tight">
+
+            <span class="gradient-text text-xs sm:text-sm md:text-base">'Uprising' -</span>
+
+            <span class="gradient-text text-xs sm:text-sm md:text-base">
+              A Ganesha Foundation Initiative
+            </span>
+
+          </div>
+
         </div>
         <div class="hidden md:flex space-x-8">
           <a href="#hero" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Home</a>
@@ -95,7 +99,7 @@
 
   <section id="hero"
     class="relative min-h-screen w-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
-    style="background-image: url('./assets/hero-bg.png');">
+    style="background-image: url('./assets/hero-bg_2.png');">
 
     <!-- Overlay (BEHIND content) -->
     <div class="absolute inset-0 bg-black/50 z-0"></div>
@@ -109,7 +113,7 @@
     <!-- Content Wrapper -->
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 
   flex flex-col lg:flex-row items-center justify-between 
-  gap-12 lg:gap-10 py-10 mt-5">
+  gap-12 lg:gap-10 py-10 mt-12 sm:mt-5">
 
       <!-- LEFT CONTENT -->
       <div class="max-w-2xl text-center lg:text-left">
@@ -242,7 +246,7 @@
             </div>
             <h4 class="text-lg font-bold mb-2">Awareness Programs</h4>
             <p class="text-gray-400 text-sm">
-              Conducting campaigns to educate people about their constitutional rights and freedoms.
+              Conducting campaigns to educate people about their constitutional rights and freedom.
             </p>
           </div>
 
@@ -267,127 +271,103 @@
 
 
   <!-- Initiative / Experience Section -->
-  <section id="experience" class="relative w-screen bg-slate-900 py-20 overflow-hidden">
-    <div class="relative w-full max-w-6xl mx-auto px-4 sm:px-6">
+  <section id="experience" class="relative w-screen bg-slate-900 py-16 sm:py-20 overflow-hidden">
+    <div class="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Heading -->
-      <div class="text-center mb-16 scroll-reveal">
-        <p class="text-amber-400 font-medium mb-4">Our Journey</p>
-        <h2 class="text-4xl lg:text-5xl font-bold mb-6">
-          Initiative <span class="gradient-text"> & Impact</span>
+      <div class="text-center mb-12 sm:mb-16 scroll-reveal">
+        <p class="text-amber-400 font-medium mb-3 sm:mb-4 text-sm sm:text-base">Our Journey</p>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+          Initiative <span class="gradient-text">& Impact</span>
         </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
+
+        <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
       </div>
 
-      <div class="space-y-8">
+      <!-- Cards -->
+      <div class="space-y-6 sm:space-y-8">
 
-        <!-- Initiative 1 -->
-        <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+        <!-- CARD -->
+        <div class="card-glow bg-slate-800/50 p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl scroll-reveal">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-center justify-between mb-4 sm:mb-6">
+
             <div>
-              <h3 class="text-2xl font-bold mb-2">Uprising! – Civil Rights Initiative</h3>
-              <p class="text-amber-400 font-semibold text-lg">
+              <h3 class="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">
+                Uprising! – Civil Rights Initiative
+              </h3>
+              <p class="text-amber-400 font-semibold text-base sm:text-lg">
                 A flagship program of Ganesha Foundation
               </p>
             </div>
-            <div class="text-gray-400 font-medium bg-slate-700 px-4 py-2 rounded-full">
+
+            <div
+              class="text-gray-400 text-sm sm:text-base font-medium bg-slate-700 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full self-start lg:self-auto">
               Ongoing Initiative
             </div>
           </div>
-          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+
+          <p class="text-gray-300 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 leading-relaxed">
             “Uprising!” is a dedicated movement to promote civil rights and constitutional liberties
             among citizens of Bihar. It focuses on empowering individuals with knowledge and support
-            to stand against injustice, exploitation, and misuse of power.
+            to stand against injustice.
           </p>
-          <div class="flex flex-wrap gap-3">
-            <span class="bg-amber-400/20 text-amber-400 px-4 py-2 rounded-full text-sm font-medium">Civil Rights</span>
-            <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">Public
+
+          <div class="flex flex-wrap gap-2 sm:gap-3">
+            <span
+              class="bg-amber-400/20 text-amber-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm">Civil
+              Rights</span>
+            <span
+              class="bg-orange-400/20 text-orange-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm">Public
               Awareness</span>
-            <span class="bg-blue-400/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium">Social Justice</span>
+            <span
+              class="bg-blue-400/20 text-blue-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm">Social
+              Justice</span>
           </div>
         </div>
 
-        <!-- Initiative 2 -->
-        <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+        <!-- Repeat same pattern for other cards -->
+
+        <!-- CARD 2 -->
+        <div class="card-glow bg-slate-800/50 p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl scroll-reveal">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-center justify-between mb-4 sm:mb-6">
             <div>
-              <h3 class="text-2xl font-bold mb-2">Legal Aid</h3>
-              <p class="text-amber-400 font-semibold text-lg">
-                Justice for Every Citizen
-              </p>
+              <h3 class="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Legal Aid</h3>
+              <p class="text-amber-400 font-semibold text-base sm:text-lg">Justice for Every Citizen</p>
             </div>
-            <div class="text-gray-400 font-medium bg-slate-700 px-4 py-2 rounded-full">
+            <div
+              class="text-gray-400 text-sm sm:text-base font-medium bg-slate-700 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full self-start lg:self-auto">
               Core Service
             </div>
           </div>
-          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
-            The Foundation actively supports filing Public Interest Litigations (PILs) against harmful
-            and exploitative policies while providing free legal assistance to individuals struggling
-            to protect their fundamental rights.
+
+          <p class="text-gray-300 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 leading-relaxed">
+            The Foundation actively supports filing Public Interest Litigations (PILs) and provides free legal
+            assistance.
           </p>
-          <div class="flex flex-wrap gap-3">
-            <span class="bg-green-400/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium">Legal Aid</span>
-            <span class="bg-purple-400/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium">PIL Filing</span>
-            <span class="bg-red-400/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium">Justice Access</span>
+
+          <div class="flex flex-wrap gap-2 sm:gap-3">
+            <span
+              class="bg-green-400/20 text-green-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm">Legal
+              Aid</span>
+            <span
+              class="bg-purple-400/20 text-purple-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm">PIL
+              Filing</span>
+            <span class="bg-red-400/20 text-red-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm">Justice
+              Access</span>
           </div>
         </div>
 
-        <!-- Initiative 3 -->
-        <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
-            <div>
-              <h3 class="text-2xl font-bold mb-2">Peace & Harmony Support</h3>
-              <p class="text-amber-400 font-semibold text-lg">
-                Building Strong Communities
-              </p>
-            </div>
-            <div class="text-gray-400 font-medium bg-slate-700 px-4 py-2 rounded-full">
-              Community Initiative
-            </div>
-          </div>
-          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
-            Focused on reducing conflicts arising from ego clashes, inequality, and misuse of influence,
-            this initiative promotes peaceful coexistence and harmony through collective engagement.
-          </p>
-          <div class="flex flex-wrap gap-3">
-            <span class="bg-indigo-400/20 text-indigo-400 px-4 py-2 rounded-full text-sm font-medium">Conflict
-              Resolution</span>
-            <span class="bg-pink-400/20 text-pink-400 px-4 py-2 rounded-full text-sm font-medium">Social Harmony</span>
-            <span class="bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">Community
-              Support</span>
-          </div>
-        </div>
-
-        <!-- Initiative 4 -->
-        <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
-            <div>
-              <h3 class="text-2xl font-bold mb-2">Statewide Awareness Campaigns</h3>
-              <p class="text-amber-400 font-semibold text-lg">
-                Educating for Empowerment
-              </p>
-            </div>
-            <div class="text-gray-400 font-medium bg-slate-700 px-4 py-2 rounded-full">
-              Ongoing Effort
-            </div>
-          </div>
-          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
-            Organizing awareness programs across Bihar to educate citizens about their constitutional
-            rights, liberties, and responsibilities, empowering them to take informed actions.
-          </p>
-          <div class="flex flex-wrap gap-3">
-            <span class="bg-teal-400/20 text-teal-400 px-4 py-2 rounded-full text-sm font-medium">Awareness</span>
-            <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">Education</span>
-            <span class="bg-green-400/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium">Empowerment</span>
-          </div>
-        </div>
+        <!-- Add same responsive structure to other cards -->
 
       </div>
 
-      <!-- Contact Note -->
-      <div class="mt-10 text-gray-400 text-center text-base scroll-reveal">
+      <!-- Contact -->
+      <div class="mt-8 sm:mt-10 text-gray-400 text-center text-sm sm:text-base px-2 scroll-reveal">
         For collaborations, support, or legal assistance, reach us at:
-        <span class="text-amber-400 font-medium">ganeshafoundation2026@gmail.com</span>
+        <span class="text-amber-400 font-medium break-all">
+          ganeshafoundation2026@gmail.com
+        </span>
       </div>
 
     </div>
@@ -741,9 +721,8 @@
 
 
 
-  <section id="common-man-uprising" class="relative w-screen bg-slate-800/50  py-16 overflow-hidden">
+  <!-- <section id="common-man-uprising" class="relative w-screen bg-slate-800/50  py-16 overflow-hidden">
     <div class="relative w-full max-w-5xl mx-auto px-4 sm:px-8">
-      <!-- Section Header -->
       <div class="text-center mb-10 scroll-reveal">
         <p class="text-amber-400 font-medium mb-2 tracking-wide uppercase">Bihari's Call to Rebuild Bihar</p>
         <h2 class="text-4xl lg:text-5xl font-bold mb-2">
@@ -756,7 +735,7 @@
         </p>
       </div>
 
-      <!-- Hero Quote Box -->
+
       <div class="card-glow bg-slate-800/50 rounded-2xl p-6 shadow-2xl mb-8 scroll-reveal">
         <p class="text-lg text-gray-200 italic mb-1 leading-relaxed">
           "Common Man Uprising is a movement to empower citizens with awareness, courage, and unity
@@ -766,7 +745,6 @@
       </div>
 
       <ol class="relative border-l-4 border-amber-400/60 pl-8 mb-8 space-y-12 scroll-reveal">
-        <!-- Point 1 -->
         <li class="relative pl-8">
           <div class="absolute -left-5 top-4 w-4 h-4 bg-amber-400 rounded-full border-2 border-slate-900"></div>
           <span class="block font-bold text-white text-xl mb-1">Awakening of Rights</span>
@@ -776,7 +754,7 @@
             for their dignity and freedom.
           </div>
         </li>
-        <!-- Point 2 -->
+  
         <li class="relative pl-8">
           <div class="absolute -left-5 top-4 w-4 h-4 bg-amber-400 rounded-full border-2 border-slate-900"></div>
           <span class="block font-bold text-white text-xl mb-1">Standing Against Exploitation</span>
@@ -785,7 +763,7 @@
             It encourages collective voice and legal action against policies or practices that harm the public.
           </div>
         </li>
-        <!-- Point 3 -->
+    
         <li class="relative pl-8">
           <div class="absolute -left-5 top-4 w-4 h-4 bg-amber-400 rounded-full border-2 border-slate-900"></div>
           <span class="block font-bold text-white text-xl mb-1">Building a Just Society</span>
@@ -797,9 +775,8 @@
       </ol>
 
 
-      <!-- Bold Action Boxes -->
+     
       <div class="grid md:grid-cols-2 gap-6 scroll-reveal">
-        <!-- Left Box: "We the People of Patna" -->
         <div class="card-glow bg-slate-900/50 rounded-xl p-6">
           <h3 class="text-amber-400 font-semibold text-xl mb-4">Legal & Awareness Action</h3>
           <ul class="text-gray-200 list-disc pl-6 space-y-2 leading-relaxed">
@@ -809,7 +786,6 @@
             <li>Supporting citizens in raising their voice against injustice</li>
           </ul>
         </div>
-        <!-- Right Box: Statewide & National Vision -->
         <div class="card-glow bg-slate-900/50 rounded-xl p-6">
           <h3 class="text-orange-400 font-semibold text-xl mb-4">Vision for Society</h3>
           <ul class="text-gray-200 list-disc pl-6 space-y-2 leading-relaxed">
@@ -821,13 +797,12 @@
         </div>
       </div>
 
-      <!-- Final Call-to-Action -->
       <div class="mt-12 text-center text-amber-300 font-semibold text-lg scroll-reveal">
         Stand up—be aware, be responsible, and be empowered.<br />
         Join the movement to protect rights, promote justice, and build a better future together.
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!-- Constitutional Foundation -->
@@ -849,7 +824,7 @@
 
         <!-- Civil Liberties -->
         <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal border border-slate-700">
-          <h4 class=" text-2xl font-semibold mb-4 text-amber-400">Your Freedoms</h4>
+          <h4 class=" text-2xl font-semibold mb-4 text-amber-400">Your Freedom</h4>
           <p class="text-gray-300 leading-relaxed">
             You have the freedom to speak your thoughts, move anywhere in India,
             live peacefully, practice your religion, and express yourself.
