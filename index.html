@@ -46,7 +46,7 @@
           <img src="./assets/Ganesh Foundation Logo.png" alt="Logo" class="h-12 w-auto" />
           <span class="gradient-text">'Uprising' -</span>
           <span class="gradient-text">A Ganesha Foundation Initiative </span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-hand-fist-icon lucide-hand-fist">
             <path
@@ -54,7 +54,7 @@
             <path d="M13.888 9.662A2 2 0 0 0 17 8V5A2 2 0 1 0 13 5" />
             <path d="M9 5A2 2 0 1 0 5 5V10" />
             <path d="M9 7V4A2 2 0 1 1 13 4V7.268" />
-          </svg>
+          </svg> -->
         </div>
         <div class="hidden md:flex space-x-8">
           <a href="#hero" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Home</a>
@@ -96,75 +96,70 @@
   <section id="hero"
     class="relative min-h-screen w-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
     style="background-image: url('./assets/hero-bg.png');">
-    <!-- Overlay (for readability) -->
-    <div class="absolute inset-0 bg-black/50"></div> <!-- Optional Gradient Glow -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-10 left-10 w-48 h-48 bg-amber-400 opacity-10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-10 right-10 w-72 h-72 bg-orange-500 opacity-10 rounded-full blur-3xl"></div>
-    </div>
 
-    <!-- Glow Effects -->
-    <div class="absolute inset-0 pointer-events-none">
+    <!-- Overlay (BEHIND content) -->
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+    <!-- Glow -->
+    <div class="absolute inset-0 pointer-events-none z-0">
       <div class="absolute top-20 left-10 w-56 h-56 bg-amber-400 opacity-10 rounded-full blur-3xl"></div>
       <div class="absolute bottom-10 right-10 w-72 h-72 bg-orange-500 opacity-10 rounded-full blur-3xl"></div>
     </div>
 
-    <!-- Content -->
-    <div class="relative z-10 max-w-4xl px-6 text-center mx-auto flex flex-col items-center py-10">
+    <!-- Content Wrapper -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 
+  flex flex-col lg:flex-row items-center justify-between 
+  gap-12 lg:gap-10 py-10 mt-5">
 
-      <!-- Tagline -->
-      <!-- <p class="text-amber-400 font-medium text-sm sm:text-lg tracking-wide uppercase">
-        Uprising! - Civil Rights Initiative
-      </p> -->
+      <!-- LEFT CONTENT -->
+      <div class="max-w-2xl text-center lg:text-left">
 
-      <!-- Heading -->
-      <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold  ">
-        <span class="text-white">This is an Uprising...</span>
-        <!-- <span class="block bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
-          Ganesha Foundation
-        </span> -->
-      </h1>
+        <h1 class="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          This is an Uprising...
+        </h1>
 
-      <!-- NEW LINE (Add here) -->
-      <p class="mt-4 text-lg sm:text-xl font-semibold text-amber-300 max-w-3xl">
-        Common Man's platform for protection of Civil Rights and Liberties through collective action.
-      </p>
+        <p class="mt-4 text-base sm:text-lg md:text-xl font-semibold text-amber-300">
+          Common Man's platform for protection of Civil Rights and Liberties through collective action.
+        </p>
 
-      <!-- Description -->
-      <p class="mt-6 text-gray-300 text-base sm:text-lg leading-relaxed  ">
-        Ganesha Foundation is a social service organization registered under the Societies Registration Act, 1860.
-        We are dedicated to promoting civil rights and constitutional liberties across Bihar through awareness,
-        advocacy, and impactful community initiatives.
-      </p>
+        <p class="mt-6 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+          Ganesha Foundation is a social service organization registered under the Societies Registration Act, 1860.
+          We are dedicated to promoting civil rights and constitutional liberties across Bihar.
+        </p>
 
-      <!-- Buttons -->
-      <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-12">
-        <a href="#about"
-          class="bg-gradient-to-r from-amber-400 to-orange-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-amber-400/30 transition-all duration-300 transform hover:scale-105">
-          Know Our Journey
-        </a>
+        <!-- Buttons -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center lg:items-start 
+      justify-center lg:justify-start gap-4 sm:gap-6">
 
-        <a href="#contact"
-          class="border border-amber-400 text-amber-400 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-amber-400 hover:text-black transition-all duration-300">
-          Connect With Us
-        </a>
+          <a href="#about" class="w-full sm:w-auto text-center bg-gradient-to-r from-amber-400 to-orange-500 
+        text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+            Know Our Journey
+          </a>
+
+          <a href="#contact" class="w-full sm:w-auto text-center border border-amber-400 text-amber-400 
+        px-6 py-3 rounded-full font-semibold hover:bg-amber-400 hover:text-black transition">
+            Connect With Us
+          </a>
+        </div>
       </div>
 
-      <!-- Stats
-      <div class="mt-12 grid grid-cols-3 gap-10 max-w-md mx-auto lg:mx-0">
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-white">15+</div>
-          <div class="text-gray-400 text-xs sm:text-sm">Years Experience</div>
+      <!-- RIGHT IMAGE -->
+      <div class="relative z-20 border-4 rounded-full p-2 sm:p-3">
+
+        <div class="relative z-20 border-4 rounded-full p-2.5 sm:p-3.5">
+
+          <div class="relative z-20 border-4 rounded-full p-3 sm:p-4">
+
+            <img src="./assets/fist_3.png" alt="fist" class="w-48 sm:w-64 md:w-72 lg:w-[350px] 
+          object-contain brightness-110 contrast-125 mx-auto" />
+
+          </div>
+
         </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-white">200+</div>
-          <div class="text-gray-400 text-xs sm:text-sm">Projects Led</div>
-        </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-white">50+</div>
-          <div class="text-gray-400 text-xs sm:text-sm">Team Members</div>
-        </div>
-      </div> -->
+
+      </div>
+    </div>
+
 
     </div>
   </section>
@@ -316,7 +311,7 @@
         <div class="card-glow bg-slate-800/50 p-8 rounded-3xl scroll-reveal">
           <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
             <div>
-              <h3 class="text-2xl font-bold mb-2">Legal Aid & PIL Support</h3>
+              <h3 class="text-2xl font-bold mb-2">Legal Aid</h3>
               <p class="text-amber-400 font-semibold text-lg">
                 Justice for Every Citizen
               </p>
