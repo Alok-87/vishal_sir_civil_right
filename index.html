@@ -153,9 +153,13 @@
         <div class="relative z-20 border-4 rounded-full p-2.5 sm:p-3.5">
 
           <div class="relative z-20 border-4 rounded-full p-3 sm:p-4">
-
-            <img src="./assets/fist_3.png" alt="fist" class="w-48 sm:w-64 md:w-72 lg:w-[350px] 
+            <div class=" flex flex-col items-center px-2 py-4">
+              <img src="./assets/fist_3.png" alt="fist" class="w-48 sm:w-64 md:w-72 lg:w-[350px] 
           object-contain brightness-110 contrast-125 mx-auto" />
+              <div class=" text-base sm:text-xl md:text-2xl lg:text-3xl  text-amber-400 font-semibold">
+                जागो बिहारी जागो
+              </div>
+            </div>
 
           </div>
 
@@ -277,7 +281,7 @@
       <p class="text-amber-400 font-medium mb-3">Grow the Community</p>
 
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-        Invite & <span class="gradient-text">Build Together</span> 
+        Invite & <span class="gradient-text">Build Together</span>
       </h2>
 
       <p class="text-gray-400 max-w-2xl mx-auto mb-10">
@@ -507,9 +511,9 @@
 
       <!-- Heading -->
       <div class="text-center mb-16 scroll-reveal">
-        <p class="text-amber-400 font-medium mb-4">Our Impact</p>
+        <!-- <p class="text-amber-400 font-medium mb-4">Our Impact</p> -->
         <h2 class="text-4xl lg:text-5xl font-bold mb-6">
-          Impact <span class="gradient-text">Highlights</span>
+          Upcoming <span class="gradient-text">Services</span>
         </h2>
         <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
       </div>
@@ -716,7 +720,7 @@
       <p class="text-amber-400 font-medium mb-3">Support the Mission</p>
 
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-        Empower Justice <span class="gradient-text">Through Contribution</span> 
+        Empower Justice <span class="gradient-text">Through Contribution</span>
       </h2>
 
       <p class="text-gray-400 max-w-2xl mx-auto mb-14">
@@ -740,7 +744,8 @@
         <!-- Card 2 -->
         <div
           class="bg-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-amber-400 hover:scale-105 transition duration-300">
-          <div class="text-amber-400 flex items-center justify-center p-4"><img src="./assets/speaker-50.png" alt=""></div>
+          <div class="text-amber-400 flex items-center justify-center p-4"><img src="./assets/speaker-50.png" alt="">
+          </div>
           <h4 class="text-lg font-semibold text-white mb-2">Awareness Campaigns</h4>
           <p class="text-gray-400 text-sm">
             Spreading awareness about constitutional rights and educating citizens to stand against injustice.
@@ -750,7 +755,8 @@
         <!-- Card 3 -->
         <div
           class="bg-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-amber-400 hover:scale-105 transition duration-300">
-          <div class="text-amber-400 flex items-center justify-center p-4"><img src="./assets/protection.png" alt=""></div>
+          <div class="text-amber-400 flex items-center justify-center p-4"><img src="./assets/protection.png" alt="">
+          </div>
           <h4 class="text-lg font-semibold text-white mb-2">Rights Protection</h4>
           <p class="text-gray-400 text-sm">
             Protecting individuals from exploitation and misuse of power through structured action and advocacy.
@@ -993,59 +999,111 @@
 
 
   <!-- Constitutional Foundation -->
-  <div id="constitutional_foundation"
-    class="relative w-screen  py-16 overflow-hidden bg-slate-800/50  rounded-2xl p-6 shadow-2xl">
-    <div class="relative w-full max-w-5xl mx-auto px-4 sm:px-8">
+  <section id="constitutional_foundation" class="relative w-full py-20 bg-slate-800 overflow-hidden">
 
-      <h2 class="text-4xl lg:text-5xl font-bold mb-10 text-center">
-        Your Rights Under the <span class="gradient-text">Constitution</span>
-      </h2>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <p class="text-gray-300 text-base leading-relaxed mb-4 text-center max-w-3xl mt-5 mx-auto">
-        Every citizen of India has important rights given by the Constitution
-        <span class="text-amber-400 font-medium">(Part III – Articles 12 to 35)</span>.
-        These rights protect your freedom, ensure equality, and give you the power to take action when treated unfairly.
-      </p>
+      <!-- Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+          Your Rights Under the
+          <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-transparent bg-clip-text">
+            Constitution
+          </span>
+        </h2>
 
-      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <p class="mt-6 text-gray-300 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed">
+          Every citizen of India has important rights given by the Constitution
+          <span class="text-amber-400 font-medium">(Part III – Articles 12 to 35)</span>.
+          These rights protect your freedom, ensure equality, and give you the power
+          to take action when treated unfairly.
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid gap-6 md:grid-cols-2">
 
         <!-- Civil Liberties -->
-        <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal border border-slate-700">
-          <h4 class=" text-2xl font-semibold mb-4 text-amber-400">Your Freedom</h4>
-          <p class="text-gray-300 leading-relaxed">
-            You have the freedom to speak your thoughts, move anywhere in India,
-            live peacefully, practice your religion, and express yourself.
-            These rights protect your personal life and dignity
-            <span class="text-amber-400">(Articles 19 & 21)</span>.
+        <div
+          class="group relative bg-slate-900 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 hover:scale-[1.02] transition duration-300 shadow-xl">
+
+          <h3 class="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+            1) Civil Liberties
+          </h3>
+
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
+            Civil liberties are the freedoms protected from arbitrary interference by the State.
+          </p>
+
+          <ul class="text-gray-300 text-sm sm:text-base space-y-2 mb-4">
+            <li>• Freedom of speech and expression</li>
+            <li>• Freedom of movement</li>
+            <li>• Freedom of assembly</li>
+            <li>• Freedom of association</li>
+            <li>• Freedom of religion</li>
+            <li>• Personal liberty and life</li>
+          </ul>
+
+          <p class="text-gray-400 text-sm mb-2">
+            (Articles 19 & 21)
+          </p>
+
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Example: You can express your opinion freely, move anywhere in India,
+            protest peacefully, and live with dignity.
           </p>
         </div>
 
         <!-- Civil Rights -->
-        <div class="card-glow bg-slate-900/50 p-8 rounded-3xl text-center scroll-reveal border border-slate-700">
-          <h4 class="text-2xl font-semibold mb-4 text-amber-400">Right to Equality</h4>
-          <p class="text-gray-300 leading-relaxed">
-            Everyone is equal in the eyes of the law. No one can discriminate against you
-            based on religion, caste, gender, or background.
-            You also have protection from exploitation and unfair treatment
-            <span class="text-amber-400">(Articles 14–17, 23–24)</span>.
+        <div
+          class="group relative bg-slate-900 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 hover:scale-[1.02] transition duration-300 shadow-xl">
+
+          <h3 class="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+            2) Civil Rights
+          </h3>
+
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
+            Civil rights focus on equality, protection from discrimination, and fair treatment under the law.
+          </p>
+
+          <ul class="text-gray-300 text-sm sm:text-base space-y-2 mb-4">
+            <li>• Equality before law (Article 14)</li>
+            <li>• Prohibition of discrimination based on religion, race, caste, sex, or place of birth (Article 15)</li>
+            <li>• Equal opportunity in public employment (Article 16)</li>
+            <li>• Abolition of untouchability (Article 17)</li>
+            <li>• Protection against exploitation (Articles 23–24)</li>
+          </ul>
+
+          <p class="text-gray-300 text-sm leading-relaxed">
+            These rights ensure that every citizen is treated with equality, dignity, and justice.
           </p>
         </div>
 
         <!-- Constitutional Remedies -->
-        <div class="md:col-span-2 flex justify-center ">
-          <div class="bg-slate-900/50 p-8 rounded-xl max-w-md w-full text-center border border-slate-700 card-glow">
-            <h4 class="text-2xl font-semibold mb-4 text-amber-400">Right to Take Action</h4>
-            <p class="text-gray-300 leading-relaxed">
-              If your rights are violated, you can go to court for justice.
-              Article 32 gives you the power to fight for your rights — that’s why it’s called the
-              <span class="italic text-amber-400">“heart and soul”</span> of the Constitution.
+        <div class="md:col-span-2 flex justify-center">
+          <div
+            class="w-full max-w-xl bg-slate-900  backdrop-blur-xl border border-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-10 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+
+            <h3 class="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
+              3) Constitutional Remedies
+            </h3>
+
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
+              Article 32 gives you the power to approach the Supreme Court or High Court
+              if your rights are violated.
+            </p>
+
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+              It is called the
+              <span class="italic text-amber-400 font-medium">“heart and soul of the Constitution”</span>
+              because it allows citizens to fight for justice.
             </p>
           </div>
         </div>
 
       </div>
     </div>
-  </div>
+  </section>
 
 
   <section id="contact" class="relative w-screen bg-slate-900 py-20 overflow-hidden">
