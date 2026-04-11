@@ -111,22 +111,23 @@
     </div>
 
     <!-- Content Wrapper -->
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-2 
   flex flex-col lg:flex-col xl:flex-row items-center justify-between 
   gap-12 lg:gap-10 py-10 mt-5">
 
       <!-- LEFT CONTENT -->
       <div class="max-w-2xl text-center xl:text-left">
 
-        <h1 class="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-          This is an Uprising...
+        <h1 class="mt-4 font-bold text-white leading-tight">
+          <span class="text-xl sm:text-2xl md:text-3xl block">This is an</span>
+          <span class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Uprising...</span>
         </h1>
 
-        <p class="mt-4 text-base sm:text-lg md:text-xl font-semibold text-amber-300">
+        <p class="mt-4 text-sm sm:text-base md:text-lg font-semibold text-amber-300 max-w-sm">
           Common Man's platform for protection of Civil Rights and Liberties through collective action.
         </p>
 
-        <p class="mt-6 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+        <p class="mt-6 text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm">
           Ganesha Foundation is a social service organization registered under the Societies Registration Act, 1860.
           We are dedicated to promoting civil rights and constitutional liberties across Bihar.
         </p>
@@ -181,9 +182,12 @@
       <!-- Heading -->
       <div class="text-center mb-12">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
-          Awaken <span class="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Bihar</span>
+          नागरिक कर्तव्यों के पालन का <span class="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">आह्वान</span>
         </h2>
-        <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto rounded-full"></div>
+        <p class="text-gray-400 text-sm sm:text-base max-w-3xl mx-auto mt-4 leading-relaxed">
+          (लोकतंत्र की सुंदरता इस बात में है कि नागरीक कर्तव्यों के पालन के बिना आपके अधिकार सुनिश्चित नहीं हो सकते।)
+        </p>
+        <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto rounded-full mt-6"></div>
       </div>
 
       <!-- Quote Card -->
@@ -1299,6 +1303,32 @@
           व्यवस्था द्वारा किए जा रहे अन्यायों के प्रति अपनी आँखें मूँद लेना चुना है। परिणामस्वरूप स्वामी और सेवकों का
           संबंध घटकर "राजा और प्रजा" जैसा हो गया है, जहाँ सेवक ही "राजाओं" की भूमिका में आ बैठे हैं।
         </p>
+      </div>
+
+      <!-- Voice Input -->
+      <div class="card-glow bg-slate-800/50 rounded-2xl p-6 sm:p-8 mt-10 scroll-reveal">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Share Your Voice</h3>
+        <p class="text-gray-400 text-sm sm:text-base mb-6">Your words matter. Speak up — every voice adds to the uprising.</p>
+
+        <div class="space-y-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300"
+          />
+          <textarea
+            rows="5"
+            placeholder="Share your thoughts, grievances, or suggestions..."
+            class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300 resize-none"
+          ></textarea>
+          <div class="text-right">
+            <button
+              type="button"
+              class="bg-gradient-to-r from-amber-400 to-orange-500 text-black px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-amber-400/30">
+              Submit Your Voice ✊
+            </button>
+          </div>
+        </div>
       </div>
 
     </div>
