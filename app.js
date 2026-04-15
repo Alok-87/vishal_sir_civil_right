@@ -26,10 +26,13 @@
       }
 
       // Article Read More / Read Less toggle
-      function toggleArticle() {
-        const fullArticle = document.getElementById('full-article');
-        const text = document.getElementById('read-more-text');
-        const icon = document.getElementById('read-more-icon');
+      function toggleArticle(contentId, textId, iconId) {
+        const fullArticle = document.getElementById(contentId);
+        const text = document.getElementById(textId);
+        const icon = document.getElementById(iconId);
+        
+        if (!fullArticle || !text || !icon) return;
+
         const isHidden = fullArticle.classList.contains('hidden');
         if (isHidden) {
           fullArticle.classList.remove('hidden');

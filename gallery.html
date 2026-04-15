@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesha Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+          },
+          colors: {
+            primary: "#0F172A",
+            accent: "#F59E0B",
+            secondary: "#1E293B",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100vw;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-900 text-white overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 nav-blur">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+
+          <!-- Logo -->
+          <img src="./assets/Ganesh Foundation Logo.png" alt="Logo" class="h-10 sm:h-12 w-auto n" />
+
+          <!-- Text -->
+          <div
+            class="flex flex-row sm:flex-row items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg font-bold leading-tight">
+
+            <span class="gradient-text text-xs sm:text-sm md:text-base">'Uprising' -</span>
+
+            <span class="gradient-text text-xs sm:text-sm md:text-base">
+              A Ganesha Foundation Initiative
+            </span>
+
+          </div>
+
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#hero" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Home</a>
+          <a href="#about" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">About</a>
+          <a href="#experience" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Experience</a>
+          <a href="#common-man-uprising"
+            class="text-amber-400 font-semibold border-b-2 border-amber-400 transition-colors duration-300">
+            Common Man Uprising
+          </a>
+          <!-- <a href="blog.html" class="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+            target="_blank">Our Blogs</a> -->
+          <a href="#contact" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Contact</a>
+        </div>
+        <button class="md:hidden text-white focus:outline-none" onclick="toggleMenu()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+        <div class="flex flex-col space-y-3">
+          <a href="#hero" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Home</a>
+          <a href="#about" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">About</a>
+          <a href="#experience" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Experience</a>
+          <a href="#common-man-uprising"
+            class="text-amber-400 font-semibold border-b-2 border-amber-400 transition-colors duration-300">
+            Common Man Uprising
+          </a>
+          <!-- <a href="blog.html" class="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+            target="_blank">Our Blogs</a> -->
+          <a href="#contact" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative w-screen h-[60vh] flex items-center justify-center overflow-hidden">
+
+  <!-- Background Image -->
+  <img src="./assets/gallery-hero.png"
+    class="absolute inset-0 w-full h-full object-cover" />
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center max-w-3xl px-6">
+
+    <h2 class="text-2xl md:text-6xl font-bold text-white mb-6 leading-tight">
+      Civil Rights & <br />
+      <span class="gradient-text">Constitutional Power</span>
+    </h2>
+
+    <p class="text-gray-300 text-md  leading-relaxed mb-8">
+      Civil rights form the backbone of a just society, ensuring equality, dignity,
+      and freedom for every citizen. When these rights are challenged, it is the
+      collective voice of the people that restores balance and accountability.
+    </p>
+
+    <button
+      class="px-8 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-black font-semibold rounded-full hover:scale-105 transition">
+      Learn More
+    </button>
+
+  </div>
+
+</section>
+
+
+  <!-- Cartoon Gallery -->
+<section id="gallery" class="w-screen bg-slate-900 py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <p class="text-amber-400 font-medium mb-3 tracking-widest uppercase text-sm">
+        monthly Highlights
+      </p>
+      <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+        Cartoon <span class="gradient-text">Gallery</span>
+      </h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
+    </div>
+
+    <!-- Grid -->
+    <div class="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
+
+      <!-- Image 1 -->
+      <div class="relative group cursor-pointer" onclick="openLightbox('./assets/cartoon1.jpg')">
+        <img src="./assets/cartoon/cartoon-1.jpg" class="rounded-2xl w-full transition duration-500 group-hover:scale-105" />
+      </div>
+
+      <!-- Image 2 -->
+      <div class="relative group cursor-pointer" onclick="openLightbox('./assets/cartoon2.jpg')">
+        <img src="./assets/cartoon/cartoon-2.jpg" class="rounded-2xl w-full transition duration-500 group-hover:scale-105" />
+      </div>
+
+      <!-- Image 3 -->
+      <div class="relative group cursor-pointer" onclick="openLightbox('./assets/cartoon3.jpg')">
+        <img src="./assets/cartoon/cartoon-4.jpg" class="rounded-2xl w-full transition duration-500 group-hover:scale-105" />
+      </div>
+
+      <!-- Add more images same way -->
+
+    </div>
+  </div>
+</section>
+
+
+  
+  
+
+  <section id="contact" class="relative w-screen bg-slate-800 py-20 overflow-hidden">
+    <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="text-amber-400 font-medium mb-4">Let's Connect</p>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">
+          Get In <span class="gradient-text">Touch</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- Contact Information Side -->
+        <div class="scroll-reveal">
+          <div class="bg-slate-800 rounded-3xl p-8 shadow-lg h-full">
+            <h3 class="text-2xl font-bold text-white mb-8">Contact Information</h3>
+
+            <!-- Location -->
+            <div class="contact-info-item mb-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold mb-2">Current Location</h4>
+                  <p class="text-gray-300">Patna Bihar</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-info-item mb-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold mb-2">Email</h4>
+                  <p class="text-gray-300 break-all">ganeshafoundation2026@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Social Media Links -->
+            <div class="mt-10">
+              <h4 class="text-white font-semibold mb-6">Follow Me</h4>
+              <div class="flex space-x-4">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/vishal.sinh03"
+                  class="social-icon block w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://x.com/Vishal_Sinh03"
+                  class="social-icon block w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  </svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="#"
+                  class="social-icon block w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+
+                <!-- YouTube -->
+                <a href="#"
+                  class="social-icon block w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Side -->
+        <div class="scroll-reveal">
+          <form class="bg-slate-800 rounded-3xl p-8 shadow-lg space-y-6 h-full">
+            <h3 class="text-2xl font-bold text-white mb-6">Send Message</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-gray-300 mb-2 font-medium" for="name">Name</label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300"
+                  type="text" id="name" name="name" placeholder="Enter Your name" required />
+              </div>
+              <div>
+                <label class="block text-gray-300 mb-2 font-medium" for="email">Email</label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300"
+                  type="email" id="email" name="email" required placeholder="Enter Your email" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-gray-300 mb-2 font-medium" for="subject">Subject</label>
+              <input
+                class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300"
+                type="text" id="subject" name="subject" placeholder="Enter subject" required />
+            </div>
+
+            <div>
+              <label class="block text-gray-300 mb-2 font-medium" for="message">Message</label>
+              <textarea
+                class="w-full px-4 py-3 rounded-xl bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300 resize-none"
+                id="message" name="message" rows="6" required placeholder="Send Your message here..."></textarea>
+            </div>
+
+            <div class="text-center pt-4">
+              <button type="submit"
+                class="bg-gradient-to-r from-amber-400 to-orange-500 text-black px-10 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-amber-400/25 transition-all duration-300 transform hover:scale-105 w-full md:w-auto">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <footer class="w-screen bg-slate-800 py-8 mt-20">
+    <div
+      class="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center sm:flex-row sm:justify-between space-y-6 sm:space-y-0">
+
+      <!-- Contact Side -->
+      <div
+        class="order-1 sm:order-2 flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 text-sm text-gray-300 justify-center w-full sm:w-auto text-center sm:text-left">
+
+        <!-- Email -->
+        <a href="mailto:ganeshafoundation2026@gmail.com"
+          class="hover:text-amber-400 transition-colors duration-300 flex items-center justify-center sm:justify-start space-x-2 whitespace-nowrap">
+          <svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          <span>ganeshafoundation2026@gmail.com</span>
+        </a>
+
+        <!-- WhatsApp Icon -->
+        <!-- <a href="https://wa.me/919229551125" target="_blank" rel="noopener noreferrer"
+          class="hover:text-amber-400 transition-colors duration-300 flex items-center justify-center sm:justify-start space-x-2 whitespace-nowrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5">
+            <path fill="#25D366"
+              d="M16 3C8.832 3 3 8.832 3 16c0 2.36.594 4.552 1.63 6.486L3 29l6.7-1.745A12.88 12.88 0 0 0 16 29c7.168 0 13-5.832 13-13S23.168 3 16 3z" />
+            <path fill="#FFF"
+              d="M22.3 18.67c-.31-.15-1.84-.91-2.13-1.02-.28-.1-.48-.15-.68.15-.2.31-.78 1.02-.96 1.22-.18.2-.36.23-.67.08-.31-.15-1.3-.48-2.48-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.13-.13.31-.36.46-.54.15-.18.2-.31.31-.51.1-.2.05-.38-.02-.54-.08-.15-.68-1.64-.93-2.25-.24-.58-.49-.5-.68-.51-.18-.01-.38-.01-.58-.01s-.54.08-.82.38c-.28.31-1.08 1.06-1.08 2.59s1.11 3.01 1.26 3.22c.15.2 2.18 3.34 5.29 4.69.74.32 1.32.51 1.77.65.74.24 1.42.21 1.95.13.59-.09 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.35z" />
+          </svg>
+          <span>+91 92295 51125</span>
+        </a> -->
+      </div>
+
+      <!-- Copyright -->
+      <div class="order-2 sm:order-1 text-sm select-none w-full text-center sm:text-left text-gray-400">
+        &copy; 2026 Ganesha Foundation. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
